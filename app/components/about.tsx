@@ -13,8 +13,10 @@ export default function About() {
           platforms.
         </p>
       </div>
-
-      <div className="mt-24 w-full flex flex-col md:flex-row items-center">
+      <a id="about" className="relative mt-[-96px] block invisible">
+        a
+      </a>
+      <div className="mt-48 w-full flex flex-col md:flex-row items-center">
         <div className="md:w-6/12">
           <h5 className="text-2xl md:text-4xl font-bold text-[#1446A0] capitalize">
             Improved Corporate Decision-making
