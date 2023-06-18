@@ -1,7 +1,11 @@
+'use client'
 import Image from "next/image";
+import useNotAvailableModal from "../hooks/useNotAvailableModal";
 
 
 export default function Navbar() {
+  const notAvailableModel = useNotAvailableModal()
+
   return (
     <div className="bg-white text-black min-h-screen min-w-[292px] px-3 flex flex-col items-center">
       <Image
@@ -12,7 +16,7 @@ export default function Navbar() {
         className="mt-24"
       ></Image>
 
-      <a href="" className="text-black flex mt-6 p-3 flex-row w-full">
+      <a href="" className="text-black flex mt-6 p-3 flex-row w-full" onClick={notAvailableModel.onOpen}>
         <img className="mr-3" src="/assets/search.svg" alt="search icon" />
         Search
       </a>
@@ -42,12 +46,12 @@ export default function Navbar() {
 
       <h4 className="font-medium uppercase text-sm w-full mt-6">account</h4>
 
-      <a href="" className="text-black flex mt-4 p-3 flex-row w-full">
+      <a href="" className="text-black flex mt-4 p-3 flex-row w-full" onClick={notAvailableModel.onOpen}>
         <img className="mr-3" src="/assets/account.svg" alt="account icon" />
         Manage Account
       </a>
 
-      <a href="" className="text-black flex mt-4 p-3 flex-row w-full">
+      <a href="" className="text-black flex mt-4 p-3 flex-row w-full" onClick={notAvailableModel.onOpen}>
         <img className="mr-3" src="/assets/card.svg" alt="credit card icon" />
         Manage Subscription
       </a>
