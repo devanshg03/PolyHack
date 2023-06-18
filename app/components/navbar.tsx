@@ -15,8 +15,6 @@ const Navbar:React.FC<NavBarProps> = ({
   const loginModal = useLoginModal()
   const onBoardModal = useOnBoardModal()
 
-  console.log(currentUser)
-
   return (
     <>
       <nav className="px-6 md:px-[100px] w-full bg-white flex fixed flex-row h-24 items-center z-[1]">

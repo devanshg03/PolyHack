@@ -9,7 +9,7 @@ function NotAvailableModal() {
 
     const bodyContent = (
         <div className='flex flex-col gap-4'>
-            <div>More features are coming soon.Send us ideas to hello@audaiq.com. Thanks.</div>
+            <div>More features are coming soon. Send us ideas to hello@audaiq.com. Thanks.</div>
         </div>
     )
 

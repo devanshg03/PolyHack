@@ -13,6 +13,7 @@ import {
 } from "chart.js";
 import Topic from "../components/topic";
 import Sentimentbar from "../components/sentimentbar";
+import useDashboard from "../hooks/useDashboard";
 
 ChartJS.register(
   LineElement,
@@ -25,6 +26,9 @@ ChartJS.register(
 );
 
 export default function Dashboard() {
+
+  const dashboard = useDashboard()
+  
   const data = {
     labels: ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun"],
     datasets: [

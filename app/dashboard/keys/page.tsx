@@ -1,7 +1,12 @@
+'use client'
+import useDashboard from "@/app/hooks/useDashboard";
 import Post from "../../components/post";
 import Topic from "../../components/topic";
 
 export default function keys() {
+
+  const dashboard = useDashboard()
+
   return (
     <div className="px-12 grid grid-cols-3 gap-6 pb-12">
       <div className="col-span-3 lg:col-span-2 h-[680px] rounded-[36px] bg-black p-6">

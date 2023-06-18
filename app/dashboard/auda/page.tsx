@@ -11,6 +11,7 @@ import {
   Filler,
 } from "chart.js";
 import Sentimentbar from "@/app/components/sentimentbar";
+import useDashboard from "@/app/hooks/useDashboard";
 
 ChartJS.register(
   LineElement,
@@ -22,6 +23,11 @@ ChartJS.register(
 );
 
 export default function audaiq() {
+
+  const dashboard = useDashboard()
+
+  console.log(dashboard.company)
+
   const overalldata = {
     labels: ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun"],
     datasets: [

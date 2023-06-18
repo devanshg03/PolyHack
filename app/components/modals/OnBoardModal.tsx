@@ -11,10 +11,12 @@ import {FaPeopleArrows,FaHandsHelping} from 'react-icons/fa'
 import {RiMentalHealthFill} from 'react-icons/ri'
 import {BsReddit} from 'react-icons/bs'
 import { useRouter } from 'next/navigation'
+import useDashboard from '@/app/hooks/useDashboard'
 
 function OnBoardModal() {
 
     const router = useRouter()
+    const dashboard = useDashboard()
 
     const companies = [
         {
@@ -77,7 +79,9 @@ function OnBoardModal() {
 
         console.log(data)
 
-        router.push('/dashboard')
+        dashboard.onChangeCompany(company)
+
+        router.push(`/dashboard`)
 
         onBoardModal.onClose()
 

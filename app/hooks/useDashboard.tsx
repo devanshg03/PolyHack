@@ -7,11 +7,11 @@ interface DashboardStore{
     onChangeGoal: (goal:string) => void
 }
 
-const useDashboardStore = create<DashboardStore>((set)=>({
+const useDashboard = create<DashboardStore>((set)=>({
     company:'',
     goal:'',
     onChangeCompany: (company:string) => set({company:company}),
     onChangeGoal: (goal:string) => set({goal:goal})
 }))
 
-export default useDashboardStore
+export default useDashboard
