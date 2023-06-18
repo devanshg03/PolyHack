@@ -4,17 +4,28 @@ import { useCallback, useState } from 'react'
 import { FieldValues, SubmitHandler, useForm} from 'react-hook-form'
 import Modal from './Modal'
 import Heading from '../Heading'
-import Input from '../inputs/Input'
 import useOnBoardModal from '@/app/hooks/useOnBoardModal'
 import CategoryInput from '../inputs/CategoryInput'
 import {FiActivity} from 'react-icons/fi'
-import {FaPeopleArrows} from 'react-icons/fa'
+import {FaPeopleArrows,FaHandsHelping} from 'react-icons/fa'
 import {RiMentalHealthFill} from 'react-icons/ri'
+import {BsReddit} from 'react-icons/bs'
 import { useRouter } from 'next/navigation'
 
 function OnBoardModal() {
 
     const router = useRouter()
+
+    const companies = [
+        {
+            label:"BetterHelp",
+            icon:FaHandsHelping
+        },
+        {
+            label:"Reddit",
+            icon:BsReddit
+        },
+    ]
 
     const goals = [
         {
@@ -45,14 +56,13 @@ function OnBoardModal() {
         setValue
     } = useForm<FieldValues>({
         defaultValues:{
-            name:'',
-            instagram:'',
-            twitter:'',
+            company:'BetterHelp',
             goal:'Improve Mental Health'
         }
     })
 
     const goal = watch("goal")
+    const company = watch('company')
     
     const setCustomValue = (id:string, value:any) => {
         setValue(id,value,{
@@ -90,10 +100,23 @@ function OnBoardModal() {
     const bodyContent = (
         <div className='flex flex-col gap-4'>
             <Heading title='Brand name/ Company name'/>
-            <Input id="name" label='Brand Name / Company Name' disabled={isLoading} register={register} errors={errors} required/>
-            <Heading title='Socials'/>
-            <Input id="instagram" label='Instagram @' disabled={isLoading} register={register} errors={errors} required/>
-            <Input id="twitter" label='Twitter @' disabled={isLoading} register={register} errors={errors} required/>
+            <div className="pt-2 flex items-center justify-center overflow-x-auto gap-4">
+                {companies.map((item,index)=>{
+                    return(
+                        <CategoryInput
+                            onClick={(company)=>{setCustomValue('company', company)}}
+                            key={index}
+                            label={item.label}
+                            icon={item.icon}
+                            selected={company===item.label}
+                        />
+                    )
+                })}
+            </div>
+            {/* <Input id="name" label='Brand Name / Company Name' disabled={isLoading} register={register} errors={errors} required/> */}
+            {/* <Heading title='Socials'/> */}
+            {/* <Input id="instagram" label='Instagram @' disabled={isLoading} register={register} errors={errors} required/>
+            <Input id="twitter" label='Twitter @' disabled={isLoading} register={register} errors={errors} required/> */}
             <Heading title='Your goal'/>
             <div className="pt-2 flex items-center justify-between overflow-x-auto gap-4">
                 {goals.map((item,index)=>{

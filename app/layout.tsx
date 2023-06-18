@@ -4,6 +4,7 @@ import RegisterModal from "./components/modals/RegisterModal";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import OnBoardModal from "./components/modals/OnBoardModal";
+import NotAvailableModal from "./components/modals/NotAvailableModal";
 
 const inter = Inter({ subsets: ["latin"] });
 
