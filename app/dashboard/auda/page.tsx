@@ -1,3 +1,5 @@
+import Sentimentbar from "@/app/components/sentimentbar";
+
 export default function audaiq() {
   return (
     <div className="px-12 grid grid-cols-3 gap-6 pb-12">
@@ -16,6 +18,17 @@ export default function audaiq() {
           <a href="" className="text-xs capitalize text-right">
             view less
           </a>
+        </div>
+        <div className="flex flex-col gap-3">
+          <Sentimentbar site="twitter" change="+3" value={22} />
+          <Sentimentbar site="instagram" change="+3" value={78} />
+          <Sentimentbar site="facebook" change="+3" value={78} />
+          <Sentimentbar site="reddit" change="+3" value={78} />
+          <Sentimentbar site="youtube" change="+3" value={78} />
+          <Sentimentbar site="linkedin" change="+3" value={78} />
+          <Sentimentbar site="tiktok" change="+3" value={78} />
+          <Sentimentbar site="weibo" change="+3" value={78} />
+          <Sentimentbar site="wechat" change="+3" value={78} />
         </div>
       </div>
     </div>

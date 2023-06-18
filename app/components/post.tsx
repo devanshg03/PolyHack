@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 interface PostProps {
@@ -33,13 +34,16 @@ export default function Post({ site, sub, url, caption }: PostProps) {
         <div className="w-[16px] h-[16px] relative gap-3">
           <Image src={logoSrc} fill={true} alt={logoAlt}></Image>
         </div>
-        <p className="text-[#FF4500] font-medium text-base capitalize">
+        <p
+          className="ml-2 text-sm font-medium capitalize"
+          style={{ color: `${postAccent}` }}
+        >
           {site}
         </p>
       </div>
 
       <p className="text-[10px]">{sub}</p>
-      <p className="text-sm">{caption}</p>
+      <p className="text-xs">{caption}</p>
     </div>
   );
 }

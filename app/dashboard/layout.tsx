@@ -19,7 +19,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       break;
   }
 
-  console.log(router);
   return (
     <>
       <div className="flex flex-row">
