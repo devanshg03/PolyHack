@@ -10,8 +10,11 @@ import CategoryInput from '../inputs/CategoryInput'
 import {FiActivity} from 'react-icons/fi'
 import {FaPeopleArrows} from 'react-icons/fa'
 import {RiMentalHealthFill} from 'react-icons/ri'
+import { useRouter } from 'next/navigation'
 
 function OnBoardModal() {
+
+    const router = useRouter()
 
     const goals = [
         {
@@ -50,8 +53,6 @@ function OnBoardModal() {
     })
 
     const goal = watch("goal")
-
-    console.log(goal)
     
     const setCustomValue = (id:string, value:any) => {
         setValue(id,value,{
@@ -61,10 +62,14 @@ function OnBoardModal() {
         })
     }
 
-    const onSubmit : SubmitHandler<FieldValues> = (data) => {
+    const onSubmit : SubmitHandler<FieldValues> = async (data) => {
         setIsLoading(true)
 
         console.log(data)
+
+        router.push('/dashboard')
+
+        onBoardModal.onClose()
 
         setIsLoading(false)
 
@@ -110,8 +115,8 @@ function OnBoardModal() {
         <Modal
             disabled={isLoading}
             isOpen={onBoardModal.isOpen}
-            title="Let's Setup Your Account"
-            actionLabel='Continue'
+            title="Give us some information"
+            actionLabel='Generate'
             onClose={onBoardModal.onClose}
             onSubmit={handleSubmit(onSubmit)}
             body={bodyContent}

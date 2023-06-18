@@ -14,6 +14,7 @@ import { toast } from 'react-hot-toast'
 import useLoginModal from '@/app/hooks/useLoginModal'
 import { useRouter } from 'next/navigation'
 import Button from '../Button'
+import useOnBoardModal from '@/app/hooks/useOnBoardModal'
 
 function LoginModal() {
 
@@ -21,6 +22,7 @@ function LoginModal() {
 
     const registerModal = useRegisterModal();
     const loginModal = useLoginModal()
+    const onBoardModal = useOnBoardModal()
 
     const [isLoading,setIsLoading] = useState(false)
 
@@ -49,8 +51,9 @@ function LoginModal() {
 
             if (callback?.ok){
                 toast.success('Logged In')
-                router.refresh()
                 loginModal.onClose()
+                router.refresh()
+                onBoardModal.onOpen()
             }
 
             if (callback?.error){
