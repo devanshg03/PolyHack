@@ -18,20 +18,22 @@ const Navbar:React.FC<NavBarProps> = ({
   return (
     <>
       <nav className="px-6 md:px-[100px] w-full bg-white flex fixed flex-row h-24 items-center z-[1]">
-        <Image
-          src="/assets/logo.png"
-          width={144}
-          height={48}
-          alt="AudaIQ Logo in Blue"
-        ></Image>
+        <a href="/">
+          <Image
+            src="/assets/logo.png"
+            width={144}
+            height={48}
+            alt="AudaIQ Logo in Blue"
+          ></Image>
+        </a>
 
         <div className="hidden md:block ml-48 font-normal text-normal text-black">
-          <a href="">About</a>
-          <a className="ml-24" href="">
-            Pricing
+          <a href="#about">About</a>
+          <a className="ml-24" href="#features">
+            Features
           </a>
-          <a className="ml-24" href="">
-            Contact
+          <a className="ml-24" href="#pricing">
+            Pricing
           </a>
         </div>
 
