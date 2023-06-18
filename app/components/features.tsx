@@ -2,8 +2,11 @@ import Image from "next/image";
 
 export default function Features() {
   return (
-    <div className="w-full bg-[#DDE7F9] py-24">
-      <div className="text-center px-[10%] md:px-[144px]">
+    <div id="features" className="w-full bg-[#DDE7F9] py-24">
+      <a id="about" className="relative mt-[-96px] block invisible">
+        a
+      </a>
+      <div className="mt-24 text-center px-[10%] md:px-[144px]">
         <h4 className="text-black font-bold text-2xl md:text-4xl mb-12">
           We handle every aspect of your social sentiment. We don’t just
           simplify it, we handle it the complete process.

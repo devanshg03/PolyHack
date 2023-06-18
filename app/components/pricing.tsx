@@ -1,6 +1,6 @@
 export default function Pricing() {
   return (
-    <div className="py-24 bg-white text-center">
+    <div id="pricing" className="py-24 bg-white text-center">
       <h4 className="text-black px-[10%]md:px-24 font-bold text-3xl md:text-4xl mb-6">
         Pricing
       </h4>
