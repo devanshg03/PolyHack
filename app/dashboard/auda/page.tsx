@@ -6,7 +6,6 @@ import {
   CategoryScale, // x-axis
   LinearScale, // y-axis
   PointElement,
-  Legend,
   Tooltip,
   Filler,
 } from "chart.js";
@@ -26,8 +25,6 @@ export default function audaiq() {
 
   const dashboard = useDashboard()
 
-  console.log(dashboard.company)
-
   const overalldata = {
     labels: ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun"],
     datasets: [
@@ -46,7 +43,7 @@ export default function audaiq() {
     labels: ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun"],
     datasets: [
       {
-        data: [50, 12, 45, 67, 12, 35, 67],
+        data: [46, 88, 74, 71, 60, 76, 41],
         borderColor: "#2D9CDB",
         pointBorderColor: "#2D9CDB",
         backgroundColor: "rgba(45, 156, 219, 0.2)",
@@ -92,25 +89,25 @@ export default function audaiq() {
     <div className="px-12 grid grid-cols-3 gap-6 pb-12">
       <div className="col-span-3 lg:col-span-2 h-auto rounded-[36px] bg-black p-6">
         <div className="flex flex-row justify-between items-baseline mb-6">
-          <h3 className="text-xl font-medium">Sentiment Overview</h3>
-          <a href="" className="text-xs capitalize text-right">
+          <h3 className="text-xl font-medium text-white">Sentiment Overview</h3>
+          <a href="/dashboard" className="text-xs capitalize text-right text-white">
             view less
           </a>
         </div>
 
-        <p>Overall</p>
+        <p className="text-white">Overall</p>
         <Line
           data={overalldata}
           options={options}
           className="max-h-[240px] w-auto mt-2 mb-6"
         ></Line>
-        <p>Twitter</p>
+        <p className="text-white">Twitter</p>
         <Line
           data={twitterdata}
           options={options}
           className="max-h-[240px] w-auto mt-2 mb-6"
         ></Line>
-        <p>Instagram</p>
+        <p className="text-white">Instagram</p>
         <Line
           data={instagramdata}
           options={options}
@@ -120,8 +117,8 @@ export default function audaiq() {
 
       <div className="col-span-3 lg:col-span-1 min-w-330 h-auto rounded-[36px] bg-black p-6">
         <div className="flex flex-row justify-between items-baseline mb-6">
-          <h3 className="text-xl font-medium">Sentiment by Channel</h3>
-          <a href="" className="text-xs capitalize text-right">
+          <h3 className="text-xl font-medium text-white">Sentiment by Channel</h3>
+          <a href="/dashboard" className="text-xs capitalize text-right text-white">
             view less
           </a>
         </div>

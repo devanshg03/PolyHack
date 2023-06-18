@@ -29,7 +29,7 @@ export default function Post({ site, sub, url, caption }: PostProps) {
   }
 
   return (
-    <div className="bg-white text-black p-3 rounded-xl flex flex-col gap-1">
+    <div className="bg-white text-black p-3 rounded-xl flex flex-col gap-1 flex-1">
       <div className="flex flex-row items-center">
         <div className="w-[16px] h-[16px] relative gap-3">
           <Image src={logoSrc} fill={true} alt={logoAlt}></Image>

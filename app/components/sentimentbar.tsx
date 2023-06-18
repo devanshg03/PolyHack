@@ -39,7 +39,7 @@ export default function Sentimentbar({ site, value, change }: BarProps) {
 
   return (
     <div>
-      <div className="flex flex-row justify-between text-sm font-normal">
+      <div className="flex flex-row justify-between text-sm font-normal text-white">
         <p className="capitalize">{site}</p>
         <p>{change}%</p>
       </div>

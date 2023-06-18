@@ -23,10 +23,6 @@ function OnBoardModal() {
             label:"BetterHelp",
             icon:FaHandsHelping
         },
-        {
-            label:"Reddit",
-            icon:BsReddit
-        },
     ]
 
     const goals = [
@@ -103,7 +99,7 @@ function OnBoardModal() {
 
     const bodyContent = (
         <div className='flex flex-col gap-4'>
-            <Heading title='Brand name/ Company name'/>
+            <Heading title='Brand name / Company name' subtitle='Only 1 company for beta version'/>
             <div className="pt-2 flex items-center justify-center overflow-x-auto gap-4">
                 {companies.map((item,index)=>{
                     return(
