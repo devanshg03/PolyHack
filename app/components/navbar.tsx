@@ -15,6 +15,8 @@ const Navbar:React.FC<NavBarProps> = ({
   const loginModal = useLoginModal()
   const onBoardModal = useOnBoardModal()
 
+  console.log(currentUser)
+
   return (
     <>
       <nav className="px-6 md:px-[100px] w-full bg-white flex fixed flex-row h-24 items-center z-[1]">
@@ -40,7 +42,7 @@ const Navbar:React.FC<NavBarProps> = ({
         <div className="ml-auto justify-self-end">
           {currentUser?
            <button className="bg-black text-white ml-6 py-2 px-6 rounded-full" onClick={onBoardModal.onOpen}>
-            Dashboard
+            Get Started
           </button>:
           <button className="bg-black text-white ml-6 py-2 px-6 rounded-full" onClick={loginModal.onOpen}>
             Login

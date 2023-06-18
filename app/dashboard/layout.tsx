@@ -1,31 +1,19 @@
-"use client";
 import Dashnav from "../components/dashnav";
 import Sidebar from "../components/sidebar";
 import React from "react";
 import { usePathname } from "next/navigation";
+import getCurrentUser from "../actions/getCurrentUser";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  let router = usePathname().split("/").pop();
+export default async function Layout({ children }: { children: React.ReactNode }) {
 
-  switch (router) {
-    case "dashboard":
-      router = "Home";
-      break;
-    case "auda":
-      router = "AudaIQ Score";
-      break;
-    case "keys":
-      router = "Key Topics / Trends";
-      break;
-  }
+  const currentUser = await getCurrentUser()
 
-  console.log(router);
   return (
     <>
       <div className="flex flex-row">
-        <Sidebar />
+        <Sidebar/>
         <div className="bg-[#DDE7F9] w-full">
-          <Dashnav currentRoute={router} />
+          <Dashnav currentUser={currentUser}/>
           {children}
         </div>
       </div>

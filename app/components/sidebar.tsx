@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 export default function Navbar() {
   return (
     <div className="bg-white text-black min-h-screen min-w-[292px] px-3 flex flex-col items-center">
