@@ -80,7 +80,7 @@ const Modal: React.FC <ModalProps> = ({
                                 className="p-1 border-0 hover:opacity-70 transition absolute left-9">
                                     <IoMdClose size={16}/>
                                 </button>
-                                <div className="text-lg font-semibold">{title}</div>
+                                <div className="text-lg font-semibold text-black">{title}</div>
                             </div>
                             <div className="p-6 flex-auto relative">
                                 {body}

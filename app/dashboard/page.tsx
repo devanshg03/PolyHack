@@ -27,8 +27,6 @@ ChartJS.register(
 
 export default function Dashboard() {
 
-  const dashboard = useDashboard()
-  
   const data = {
     labels: ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun"],
     datasets: [
@@ -43,7 +41,7 @@ export default function Dashboard() {
       },
       {
         label: "Twitter",
-        data: [50, 12, 45, 67, 12, 35, 67],
+        data: [46, 88, 74, 71, 60, 76, 41],
         borderColor: "#2D9CDB",
         pointBorderColor: "#2D9CDB",
         backgroundColor: "rgba(45, 156, 219, 0.2)",
@@ -85,8 +83,8 @@ export default function Dashboard() {
       <div className="px-12 grid grid-cols-3 gap-6 pb-12">
         <div className="col-span-3 flex flex-col lg:col-span-2 h-[340px] rounded-[36px] bg-black p-6">
           <div className="flex flex-row justify-between items-baseline mb-6">
-            <h3 className="text-xl font-medium">Sentiment Overview</h3>
-            <a href="" className="text-xs capitalize text-right">
+            <h3 className="text-xl font-medium text-white">Sentiment Overview</h3>
+            <a href="/dashboard/auda" className="text-xs capitalize text-right text-white">
               view full
             </a>
           </div>
@@ -99,12 +97,11 @@ export default function Dashboard() {
 
         <div className="col-span-3 lg:col-span-1 min-w-330 h-[340px] rounded-[36px] bg-black p-6">
           <div className="flex flex-row justify-between items-baseline mb-6">
-            <h3 className="text-xl font-medium">Sentiment by Channel</h3>
-            <a href="" className="text-xs capitalize text-right">
+            <h3 className="text-xl font-medium text-white">Sentiment by Channel</h3>
+            <a href="/dashboard/auda" className="text-xs capitalize text-right text-white">
               view all
             </a>
           </div>
-
           <div className="flex flex-col gap-3">
             <Sentimentbar site="weibo" change="+3" value={78} />
           </div>
@@ -112,48 +109,48 @@ export default function Dashboard() {
 
         <div className="col-span-3 lg:col-span-2 h-[340px] rounded-[36px] bg-black p-6">
           <div className="flex flex-row justify-between items-baseline mb-6">
-            <h3 className="text-xl font-medium">Trending Topics</h3>
-            <a href="" className="text-xs capitalize text-right">
+            <h3 className="text-xl font-medium text-white">Trending Topics</h3>
+            <a href="/dashboard/keys" className="text-xs capitalize text-right text-white">
               view all
             </a>
           </div>
 
           <div className="flex flex-row justify-between text-xs font-normal px-6">
-            <p className="mr-28">Topic</p>
-            <p>Popularity</p>
-            <p>Type</p>
-            <p>Impact</p>
+            <p className="mr-28 text-white">Topic</p>
+            <p className="text-white">Popularity</p>
+            <p className="text-white">Type</p>
+            <p className="text-white">Impact</p>
           </div>
 
           <Topic
-            topic="‘created by’ database property"
-            popularity={98}
-            type="feature"
+            topic="BetterHelp Endorsements"
+            popularity={63}
+            type="Marketing"
             impact="high"
           />
-
           <Topic
-            topic="‘created by’ database property"
-            popularity={98}
-            type="feature"
+            topic="Mental Health Awareness"
+            popularity={88}
+            type="Community"
             impact="high"
           />
         </div>
 
         <div className="col-span-3 lg:col-span-1 h-[340px] rounded-[36px] bg-black p-6">
           <div className="flex flex-row justify-between items-baseline mb-6">
-            <h3 className="text-xl font-medium">Key Posts</h3>
-            <a href="" className="text-xs capitalize text-right">
+            <h3 className="text-xl font-medium text-white">Key Posts</h3>
+            <a href="/dashboard/keys" className="text-xs capitalize text-right text-white">
               view all
             </a>
           </div>
 
           <Post
-            site="facebook"
-            url="instagram.com"
-            sub="@typeoneerror"
-            caption="Oh lala. You can now default a Person property to `Created by`. This is so slick and killer for ..."
+            site="twitter"
+            url="https:\/\/twitter.com\/ot7bangtan01\/status\/1669775322433159188\/photo\/1"
+            sub="@ot7bangtan01"
+            caption="I suffer from anxiety and depression and recently just got help it was one of the best decisions I couldve made. theres so much help out there I know many people use better help which is online so I would suggest looking into that, and if 18+ (I would hope) its up to you! "
           />
+
         </div>
       </div>
     </div>

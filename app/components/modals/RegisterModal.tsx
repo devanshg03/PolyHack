@@ -84,10 +84,10 @@ function RegisterModal() {
                 onClick={()=>signIn('google')}
             />
             <div className='flex justify-center items-center gap-2 text-sm'>
-                <div>
+                <div className='text-black'>
                     Already have an account?
                 </div>
-                <div className='cursor-pointer hover:underline text-neutral-900 ' onClick={toggle}>
+                <div className='cursor-pointer hover:underline text-neutral-900' onClick={toggle}>
                     Login
                 </div>
             </div>
