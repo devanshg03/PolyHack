@@ -3,6 +3,11 @@
 ## Introduction
 AudaIQ is an AI-powered platform designed to provide brands with critical social insights by analyzing public sentiment across multiple social media channels. Developed during the PolyHack hackathon, it aims to empower brands with real-time alerts, actionable insights, and comprehensive metrics to understand public sentiment about their products, improve decision-making, customer experience, and brand engagement.
 
+<img width="1440" alt="Home" src="https://github.com/devanshg03/audaIQ/assets/105848104/7bf403e0-51ed-4306-9502-627a861b15aa">
+<img width="1440" alt="AudaIQ© Score" src="https://github.com/devanshg03/audaIQ/assets/105848104/8382f146-4b87-4da6-a3a9-2ed089029108">
+<img width="1440" alt="Dashboard" src="https://github.com/devanshg03/audaIQ/assets/105848104/fc0d2b9a-e105-47bd-9283-50ce44e7d461">
+
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
