@@ -80,10 +80,6 @@ For more detailed information about configuring each dependency, refer to their 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Examples
-Provide examples of how to perform common tasks or use the platform's features effectively.
-
 ## Contributors
-Credit the team members who contributed to the project, highlighting their roles and contributions.
-
+This project was created and maintained by [Devansh Gandhi](https://github.com/devanshg03). Contributions, feedback, and questions are welcome.
 
